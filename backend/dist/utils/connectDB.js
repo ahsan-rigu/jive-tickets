@@ -16,7 +16,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/ecommerce";
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const conn = yield mongoose_1.default.connect(process.env.MONGO_URI || MONGO_URI);
+        const conn = yield mongoose_1.default.connect(MONGO_URI);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     }
     catch (error) {
